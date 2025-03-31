@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* to change the breakpoints */
-@theme{
+:root{
     --breakpoint-sm:700px;                  /* default breakpoints */
     --breakpoint-md:900px;
     --breakpoint-lg:1000px;
@@ -10,4 +14,45 @@
     --padding-10:100px;
     --padding-1:1px;
     --padding-c-nav:11px;           /* customised class: it is applicable to other modifications also like pt, pb, pl etc */
+    --padding-navjott:10px;
+    --margin-20:20px;
+    --height-1:100px;
+    --size-100:100px;
+    --size-custom-n:1000px;
+}
+
+
+/* adding customised styling to objects */
+/* @layer base{
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    button{
+        border: 1px solid black;
+        padding: 3px;
+    }
+} */
+
+/* to apply directly the classes of tailwind css  */
+@layer base{
+    h1{
+        @apply text-6xl;
+    }
+    h2{
+        @apply text-4xl;
+    }
+    button{
+        @apply border;
+        @apply p-3;
+        @apply text-3xl;
+    }
+}
+
+@layer components{
+    .btn-primary{
+        @apply  bg-blue-500 rounded p-2 text-white hover:bg-blue-800
+    }
 }
