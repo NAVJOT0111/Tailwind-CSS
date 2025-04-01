@@ -45,5 +45,9 @@
     .btn{
         @apply border border-slate-400 rounded px-5 py-1.5 hover:bg-slate-100;
     }
+    .img-gallery{
+        @apply w-80 rounded border-2 border-blue-300 hover:border-1 hover:border-blue-100  hover:scale-110 tarnsition duration-1000 hover:brightness-125
+    }
 
 }
+
