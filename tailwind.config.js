@@ -1,17 +1,19 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./*.html", "./src/**/*.{html,js}"], // Add your file paths here
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 module.exports = {
-    theme: {
-      extend: {
-        screens: {
-          'navjot': '3690px',
-        },
-        spacing: {
-          'c-nav': '11px',
-          'navjott': '10px',
-          '100': '100px',
-          'custom-n': '1000px',
-        },
+  theme: {
+    extend: {
+      colors: {
+        customBlue: '#123456',
+        safelist: ['bg-blue-500', 'bg-red-500', 'bg-green-500'],
+
       },
     },
-    plugins: [],
-  };
-  
+  },
+};
